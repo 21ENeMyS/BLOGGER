@@ -1,0 +1,41 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Create blogger web",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/21ENeMyS/BLOGGER.git"
+  },
+  "keywords": [
+    "Blogger"
+  ],
+  "author": "21EnEmyS\u001b[D\u001b[D\u001b[e\u001b[M",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/21ENeMyS/BLOGGER/issues"
+  },
+  "homepage": "https://github.com/21ENeMyS/BLOGGER#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "express-validator": "^7.0.1",
+    "formidable": "^3.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.1.3",
+    "morgan": "^1.10.0",
+    "shortid": "^2.2.16",
+    "slugify": "^1.6.6",
+    "string-strip-html": "^13.4.6"
+  }
+}
