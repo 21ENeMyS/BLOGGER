@@ -1,3 +1,4 @@
+const { expressjwt: expressJwt } = require("express-jwt");
 const User = require("../models/UsersModel");
 const jwt = require("jsonwebtoken");
 const shortId = require("shortid");
@@ -26,8 +27,6 @@ exports.signup = async (req, res) => {
       return res.status(400).json(err);
     });
 };
-
-// TODO validation  !
 
 exports.signin = async (req, res) => {
   const { email, password } = req.body;
@@ -63,3 +62,14 @@ exports.signin = async (req, res) => {
       .json({ error: "maaf email dan password yang anda masukan salah" });
   }
 };
+
+exports.signout = (req, res) => {
+  res.clearCookie("token");
+  res.json({ message: "berhasil keluar" });
+};
+
+exports.requireSignin = expressJwt({
+  secret: process.env.JWT_SECRET,
+  algorithms: ["HS256"], // added later
+  userProperty: "auth",
+});
