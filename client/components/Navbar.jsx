@@ -40,11 +40,12 @@ const Navbar = () => {
 
           <Link
             className="py-4 px-5 lg:bg-accent_1 text-primary rounded-lg lg:hover:bg-accent_1_hover bg-black hover:bg-slate-900"
-            href={"/Login"}
+            href={"/signin"}
           >
             Get Started
           </Link>
         </div>
+        
         <div
           className="relative z-10 lg:hidden flex w-full h-6 flex-col justify-between items-center cursor-pointer"
           onClick={handleNav}

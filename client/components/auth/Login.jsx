@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
@@ -10,7 +11,7 @@ const Login = () => {
 
   return (
     <form
-      className="container mx-auto flex items-center justify-center flex-col p-8 text-black absolute z-50 lg:relative lg:z-0 h-screen md:w-full"
+      className="font-body container mx-auto flex items-center justify-center flex-col p-8 text-black absolute z-50 lg:relative lg:z-0 h-screen md:w-full"
       // onSubmit={handleSubmit}
     >
       <h1 className="text-5xl font-bold roboto text-center mb-8">Signin</h1>
@@ -91,6 +92,12 @@ const Login = () => {
       >
         Signin
       </button>
+      <h4 className="py-6 text-sm">
+        Don't have account ?{" "}
+        <Link href={"/signup"} className="text-accent_1">
+          Register
+        </Link>
+      </h4>
     </form>
   );
 };
